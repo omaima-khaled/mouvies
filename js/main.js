@@ -38,7 +38,7 @@ var NowURL =
              <div class="content-base position-relative">
                  <img src="https://image.tmdb.org/t/p//w500${result[i].poster_path}" class="w-100  rounded shadow img-fluid"alt="Michael Broad photo">
                  <div class="content-over  d-flex flex-column justify-content-center ">
-                     <h3 id="filmName">${result[i].original_title}</h3>
+                     <h3 id="filmName">${result[i].original_title?result[i].original_title:result[i].name}</h3>
                      <p id="filmDesc"> ${result[i].overview}</p>
                      <h5 id="filmRate">rate:${result[i].vote_average}</h5>
                      <h6 id="filmDate">${result[i].release_date}</h6>
