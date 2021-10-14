@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <section id="lodeingPage">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+    </section>
+    <button id="up-btn" class="btn  rounded-circle text-white">
+        <i class="fas fa-arrow-up "></i>
+    </button>
+    <section id="sideBar" class="side-bar  vh-100 w-auto position-fixed bg-dark d-flex">
+        <div id="innerSection" class="inner-section vh-100   d-flex flex-column justify-content-between ">
+            <div id="nav" class="nav d-flex flex-column mb-5">
+                <ul  >
+                    <li class="nav-catecory" id='nowplay'><a href="#" target="_self">Now Playing</a></li>
+                    <li class=" nav-catecory" id='popular'><a href="#" target="_self">Popular</a></li>
+                    <li class=" nav-catecory" id='toprate'><a href="#" target="_self">Top Rated</a></li>
+                    <li class=" nav-catecory" id='trend'><a href="#" target="_self">Trending</a></li>
+                    <li class=" nav-catecory" id='upcom'><a href="#" target="_self">Up Coming</a></li>
+                    <li class=" nav-catecory"><a href="#contactUs">Contact Us</a></li>
+ 
+                </ul>
+               
+            </div>
+            <div id="section-footer" class="footer d-flex flex-column   ">
+                <div class="icons text-white  ">
+                    <ul class="d-flex">
+                        <li> <i class="fab fa-facebook pe-2"></i></li>
+                        <li><i class="fab fa-twitter pe-2"></i></li>
+                        <li> <i class="fas fa-globe"></i></li>
+                    </ul>
+              </div>
+              <p class="text-white ">Copyright آ© 2019 All Rights <br> Reserved.</p>
+            </div>
+ 
+ 
+        </div>
+        <div id="outerSection" class="outer-section vh-100  bg-white d-flex flex-column justify-content-between align-items-center">
+           <div class="logo"><img src="images/logo.png  "   alt=""></div>
+           <div  class="toggle-icon  fa-2x"> <i class="fas fa-align-justify"></i></div>
+           <div class="end-icons d-flex flex-column mb-4">
+               <i class="fas fa-globe pb-3"></i>
+               <i class="fas fa-share-alt"></i>
+           </div>
+        </div>
+    </section>
+    <section class="search container py-5">  
+        <div class="row ">
+            <div class="col-md-6 py-3">
+                <div class="searchApi border-bottom ">
+                    <input  id="searchApi" onkeyup="searchByWord(this.value)"  type="text" class="form-control bg-transparent border-0 text-white" placeholder="get movies by word..." >
+                </div>
+            </div>
+            <div class="col-md-6 py-3">
+              <div class="searchfilms border-bottom ">
+                  <input id="serch" onkeyup="searchfilm(this.value)"  type="email" class="form-control bg-transparent border-0 text-white" placeholder="search..." >      
+              </div>
+          </div>   
+       </div>
+     </section>
+    <section id="homeSection" class="homes-ection container">
+        <div id='filmsDAta' class="row"></div>
+    </section>
+   <section class="contact container py-5" id="contactUs">
+      <h3 class="text-white py-3">ContacUs...</h3>
+      <div class="row ">
+          <div class="col-md-6 py-3">
+              <div class="userdata ">
+                  <input  id="name" type="text" class="form-control bg-transparent border-0 text-white" placeholder="Enter your name" >
+                  <span id="nameAlert" class="d-none alert-danger bg-white"></span>
+              </div>
+          </div>
+          <div class="col-md-6 py-3">
+            <div class="userdata ">
+                <input id="email" type="email" class="form-control bg-transparent border-0 text-white" placeholder="Enter Email" >
+                <span id="emailAlert" class="d-none alert-danger bg-white"></span>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <div class="userdata ">
+                <input id="phone" type="number" class="form-control bg-transparent border-0 text-white" placeholder="Enter Phone" >
+                <span id="phoneAlert" class="d-none alert-danger bg-white"></span>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <div class="userdata ">
+                <input  id="age" type="number" class="form-control bg-transparent border-0 text-white" placeholder="Enter Age" >
+                <span id="ageAlert" class="d-none alert-danger bg-white"></span>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <div class="userdata ">
+                <input id="password" type="password" class="form-control bg-transparent border-0 text-white" placeholder="Enter Password" >
+                <span id="passwordAlert" class="d-none alert-danger bg-white"></span>
+            </div>
+        </div>
+        <div class="col-md-6 py-3">
+            <div class="userdata ">
+                <input id="repassword" type="password" class="form-control bg-transparent border-0  text-white" placeholder="Repassword" >
+                <span id="repasswordAlert" class="d-none alert-danger bg-white"></span>
+            </div>
+        </div>
+         
+      </div>
+      <button id="submit" class="btn btn-outline-danger py-2 mt-2">Submit</button>
+
+
+   </section>
+
+
+
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
